@@ -1,4 +1,4 @@
-# Dara Scientist
+# Data Scientist
 
 ### Education
-PHD in Nothing
+Masters in Data Science
