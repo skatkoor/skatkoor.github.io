@@ -49,6 +49,8 @@
         <!-- Footer -->
         <footer>
             <!-- Your footer content goes here -->
+            <a href="#" onclick="goBack()">Back</a>
+            <a href="#" onclick="goForward()">Forward</a>
         </footer>
 
     </div>
@@ -65,6 +67,14 @@
     <script>
         function navigateToSynapse() {
             window.location.href = "synapse.html";
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        function goForward() {
+            window.history.forward();
         }
     </script>
 
