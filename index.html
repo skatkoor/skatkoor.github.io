@@ -11,8 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <!-- I have added the PDFObject script using the CDN link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.6/pdfobject.min.js"></script>
+    <!-- I have added the PDF.js and PDF.worker.js scripts using the CDN links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.worker.min.js"></script>
 </head>
 <body class="is-preload">
 
@@ -52,15 +53,48 @@
                 <h2 style="font-size: medium;"><a href="#">Modeling and Prediction of Concrete Compressive Strength Using Machine Learning</a></h2>
                 <p>International Journal of Engineering Research and Development</p>
             </header>
-            <!-- I have replaced the iframe element with a div element with an id of pdf-viewer -->
-            <!-- The div element will be the container for the PDF file -->
-            <div id="pdf-viewer"></div>
-            <!-- I have added a script tag to call the PDFObject.embed function with the URL of the PDF file and the selector of the div element -->
+            <!-- I have replaced the iframe element with a canvas element with an id of pdf-canvas -->
+            <!-- The canvas element will be the container for the PDF file -->
+            <canvas id="pdf-canvas"></canvas>
+            <!-- I have added a script tag to write a JavaScript function that uses the PDF.js API to load and render the PDF file on the canvas element -->
             <!-- The URL of the PDF file must be accessible online, not a local file path -->
             <script>
-                PDFObject.embed("https://github.com/skatkoor/pdfpaperpublication/raw/main/CSEIT217385.pdf", "#pdf-viewer");
+                // Get the canvas element
+                var canvas = document.getElementById("pdf-canvas");
+                // Get the canvas context
+                var context = canvas.getContext("2d");
+                // Define the function to load and render the PDF file
+                function showPDF(pdf_url) {
+                    // Create a PDF.js loading task
+                    var loadingTask = pdfjsLib.getDocument(pdf_url);
+                    // When the task is resolved, get the first page of the PDF file
+                    loadingTask.promise.then(function(pdf) {
+                        pdf.getPage(1).then(function(page) {
+                            // Set the scale of the viewport
+                            var scale = 1.5;
+                            // Get the viewport of the page
+                            var viewport = page.getViewport({scale: scale});
+                            // Set the canvas height and width to match the viewport
+                            canvas.height = viewport.height;
+                            canvas.width = viewport.width;
+                            // Render the page on the canvas
+                            var renderContext = {
+                                canvasContext: context,
+                                viewport: viewport
+                            };
+                            page.render(renderContext);
+                        });
+                    });
+                }
+                // Call the function when the page is loaded
+                window.onload = function() {
+                    // The URL of the PDF file
+                    var pdf_url = "https://github.com/skatkoor/pdfpaperpublication/raw/main/CSEIT217385.pdf";
+                    // Call the showPDF function with the URL
+                    showPDF(pdf_url);
+                };
             </script>
-            <!-- I have added a link to download the PDF file below the div element -->
+            <!-- I have added a link to download the PDF file below the canvas element -->
             <!-- The link has a download attribute that suggests a filename for the PDF file -->
             <!-- The link also has a target attribute that opens the PDF file in a new tab -->
             <p><a href="https://github.com/skatkoor/pdfpaperpublication/raw/main/CSEIT217385.pdf" download="CSEIT217385.pdf" target="_blank">Download PDF</a></p>
