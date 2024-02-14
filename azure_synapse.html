@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>azure - Sumanth Reddy</title>
+    <title>synapse - Sumanth Reddy</title>
     <!-- Include main.css -->
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Include any other CSS files if needed -->
@@ -36,21 +36,26 @@
             </ul>
         </nav>
 
-        <!-- Main -->
-        <div id="main">
-            <h1>azure</h1>
-            <!-- Add content related to azure concepts here -->
-
-            <!-- Subcategory links -->
-            <h2><a href="#" onclick="navigateToSynapse()">synapse</a></h2>
-            <!-- Add more subcategory links as needed -->
-        </div>
+       <!-- Main -->
+<div id="main">
+    <h1>synapse</h1>
+            
+    <p>Azure Synapse is an analytics service provided by Microsoft Azure that combines big data and data warehousing functionalities into a single platform, offering features such as data integration, data warehousing, big data analytics (enabling analysis of both structured and unstructured data), and real-time analytics (facilitated through integration with Azure Stream Analytics and Azure Databricks).</p>
+    
+    <p>In a scenario without Azure Synapse, data is collected from various sources and loaded into Azure Data Lake using Azure Data Factory, where pipelines are configured to manage the data ingestion process. Subsequently, big data analytics tools such as Apache Spark are employed to perform necessary transformations on the data. The processed data is then transferred to the data warehouse and subsequently utilized by services like Power BI.</p>
+    
+    <p>Azure Synapse combines the following functionalities:</p>
+    <ul>
+        <li>Enterprise Data Warehouse and Big Data Analytics</li>
+        <li>SQL Technologies utilized in SQL DW (Synapse SQL)</li>
+        <li>Spark Technologies utilized in Big Data (Apache Spark)</li>
+        <li>Pipelines for Data Integration and ETL/ELT (Azure Data Factory)</li>
+        <li>Integrations with Services like Power BI, Cosmos DB, Azure ML, etc.</li>
+     </div>
 
         <!-- Footer -->
         <footer>
             <!-- Your footer content goes here -->
-            <a href="#" onclick="goBack()">Back</a>
-            <a href="#" onclick="goForward()">Forward</a>
         </footer>
 
     </div>
@@ -63,20 +68,6 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <script>
-        function navigateToSynapse() {
-            window.location.href = "synapse.html";
-        }
-
-        function goBack() {
-            window.history.back();
-        }
-
-        function goForward() {
-            window.history.forward();
-        }
-    </script>
 
 </body>
 </html>
