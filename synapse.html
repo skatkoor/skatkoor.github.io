@@ -37,31 +37,32 @@
         </nav>
 
         <!-- Main -->
-<div id="main">
-    <h1>synapse</h1>
+        <div id="main">
+            <h1>synapse</h1>
             
-    <p>Azure Synapse is an analytics service provided by Microsoft Azure that combines big data and data warehousing functionalities into a single platform, offering features such as data integration, data warehousing, big data analytics (enabling analysis of both structured and unstructured data), and real-time analytics (facilitated through integration with Azure Stream Analytics and Azure Databricks).</p>
-    
-    <p>In a scenario without Azure Synapse, data is collected from various sources and loaded into Azure Data Lake using Azure Data Factory, where pipelines are configured to manage the data ingestion process. Subsequently, big data analytics tools such as Apache Spark are employed to perform necessary transformations on the data. The processed data is then transferred to the data warehouse and subsequently utilized by services like Power BI.</p>
-    
-    <p>Azure Synapse combines the following functionalities:</p>
-    <ul>
-        <li>Enterprise Data Warehouse and Big Data Analytics</li>
-        <li>SQL Technologies utilized in SQL DW (Synapse SQL)</li>
-        <li>Spark Technologies utilized in Big Data (Apache Spark)</li>
-        <li>Pipelines for Data Integration and ETL/ELT (Azure Data Factory)</li>
-        <li>Integrations with Services like Power BI, Cosmos DB, Azure ML, etc.</li>
-        <!-- Add an image -->
-<img src="file:///C:/Users/sk0523/Music/SynapseArc/your_image.jpg" alt="Description of your image">
+            <p>Azure Synapse is an analytics service provided by Microsoft Azure that combines big data and data warehousing functionalities into a single platform, offering features such as data integration, data warehousing, big data analytics (enabling analysis of both structured and unstructured data), and real-time analytics (facilitated through integration with Azure Stream Analytics and Azure Databricks).</p>
+            
+            <p>In a scenario without Azure Synapse, data is collected from various sources and loaded into Azure Data Lake using Azure Data Factory, where pipelines are configured to manage the data ingestion process. Subsequently, big data analytics tools such as Apache Spark are employed to perform necessary transformations on the data. The processed data is then transferred to the data warehouse and subsequently utilized by services like Power BI.</p>
+            
+            <p>Azure Synapse combines the following functionalities:</p>
+            <ul>
+                <li>Enterprise Data Warehouse and Big Data Analytics</li>
+                <li>SQL Technologies utilized in SQL DW (Synapse SQL)</li>
+                <li>Spark Technologies utilized in Big Data (Apache Spark)</li>
+                <li>Pipelines for Data Integration and ETL/ELT (Azure Data Factory)</li>
+                <li>Integrations with Services like Power BI, Cosmos DB, Azure ML, etc.</li>
+                <!-- Add an image -->
+                <img src="file:///C:/Users/sk0523/Music/SynapseArc/your_image.jpg" alt="Description of your image">
+            </ul>
+            
+            <!-- Delta Layer text -->
+            <p>Delta Layer: Delta Layer in Azure Synapse provides reliability to data lakes by addressing key challenges associated with traditional data lakes, focusing on data integrity, consistency, and reliability. Here's a clearer explanation of its features: ACID Transactional Capabilities: Delta Layer implements ACID (Atomicity, Consistency, Isolation, Durability) transactional properties on data lakes. Atomicity: Transactions are treated as single units of operation, ensuring that either all operations within a transaction are fully completed or none are. Example: When transferring money using a banking app, both deducting from one account and crediting to another must either fully complete or fully roll back. Consistency: Data remains in a consistent state before and after transactions, adhering to predefined database schemas and rules. Example: In a ticket booking system, only one person successfully books a ticket for a movie even if multiple users try simultaneously, ensuring consistency. Isolation: Concurrent transactions do not interfere with each other, ensuring that the outcome of multiple simultaneous transactions is consistent with their sequential execution. Example: When two users simultaneously send money from their accounts, each transaction is processed independently to prevent interference. Durability: Committed transactions are permanently stored and not lost even in the event of system failure. Example: After a successful purchase on an e-commerce platform, transaction details are durably stored to ensure they can be recovered in case of a system crash. Schema Enforcement and Evolution: Delta Lake enforces predefined schemas to ensure data integrity and consistency, rejecting any data that doesn't adhere to the expected schema. Example: Delta Lake rejects files with structures that don't match the predefined schema, preventing inconsistent data from entering the lake. Delta Lake supports schema evolution, allowing changes to the schema over time without disrupting existing data pipelines or risking data loss. Example: Changes to column types or the addition/removal of columns can be made to the schema without impacting ongoing data processes. Time Travel: Delta Lake implements time travel functionality, enabling users to query previous versions of data stored in the lake. This feature is useful for auditing, debugging, and recovering from errors by accessing historical data snapshots. Optimizations for Scalability and Performance: Delta Lake employs various optimizations, including efficient data compaction, indexing, caching mechanisms, and handling large-scale workloads. These optimizations improve query performance, reduce resource utilization, and enhance scalability, making Delta Lake suitable for handling large-scale data processing workloads efficiently. Unified Batch and Streaming Processing: Delta Lake provides a unified platform for both batch and streaming processing, allowing seamless integration of real-time and batch data processing workflows.</p>
+        </div>
 
-    </ul>
-</div>
-
-<!-- Footer -->
-<footer>
-    <!-- Your footer content goes here -->
-</footer>
-
+        <!-- Footer -->
+        <footer>
+            <!-- Your footer content goes here -->
+        </footer>
 
     </div>
 
