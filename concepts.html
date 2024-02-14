@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <!-- Include any other CSS files if needed -->
     <style>
-        .full-story {
-            display: none;
+        .concept {
+            display: inline-block;
+            width: 45%; /* Adjust as needed */
+            margin: 10px;
+        }
+        @media only screen and (max-width: 600px) {
+            .concept {
+                width: 90%; /* Adjust as needed for smaller screens */
+            }
         }
     </style>
 </head>
@@ -41,30 +48,29 @@
             </ul>
         </nav>
 
-     <!-- Main -->
-<div id="main">
-    <!-- Your content goes here -->
-    <h1>Concepts</h1>
-    <p>This is where you can add your learning concepts and notes.</p>
+        <!-- Main -->
+        <div id="main">
+            <!-- Your content goes here -->
+            <h1>Concepts</h1>
+            <p>This is where you can add your learning concepts and notes.</p>
 
-    <!-- Subcategory links -->
-    <div class="concept-links">
-        <div class="concept">
-            <h2><a href="deep_learning.html">Deep Learning</a></h2>
-            <p>Description of Deep Learning...</p>
+            <!-- Subcategory links -->
+            <div class="concept-links">
+                <div class="concept">
+                    <h2><a href="deep_learning.html">Deep Learning</a></h2>
+                    <p>Description of Deep Learning...</p>
+                </div>
+                <div class="concept">
+                    <h2><a href="machine_learning.html">Machine Learning</a></h2>
+                    <p>Description of Machine Learning...</p>
+                </div>
+                <div class="concept">
+                    <h2><a href="azure.html">Azure</a></h2>
+                    <p>Description of Azure...</p>
+                </div>
+                <!-- Add more subcategory links as needed -->
+            </div>
         </div>
-        <div class="concept">
-            <h2><a href="machine_learning.html">Machine Learning</a></h2>
-            <p>Description of Machine Learning...</p>
-        </div>
-        <div class="concept">
-            <h2><a href="azure.html">Azure</a></h2>
-            <p>Description of Azure...</p>
-        </div>
-        <!-- Add more subcategory links as needed -->
-    </div>
-</div>
-
 
         <!-- Footer -->
         <footer>
@@ -81,18 +87,6 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        function toggleFullStory(link) {
-            var fullStory = link.previousElementSibling;
-            if (fullStory.style.display === 'none') {
-                fullStory.style.display = 'block';
-                link.textContent = 'Hide full story';
-            } else {
-                fullStory.style.display = 'none';
-                link.textContent = 'Read full story';
-            }
-        }
-    </script>
 
 </body>
 </html>
