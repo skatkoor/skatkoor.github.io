@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delta lake - Sumanth Reddy</title>
+    <!-- Include main.css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Include any other CSS files if needed -->
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+        <!-- Intro -->
+        <div id="intro">
+            <h1>Sumanth Reddy Data Scientist Portfolio</h1>
+            <p>Data Scientist with MySQL/SQL Server, Excel, Power BI, Tableau, and Python skillset</p>
+        </div>
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Sumanth Katkoori Data Scientist</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Projects</a></li>
+                <li class="active"><a href="concepts.html">Concepts</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/sumanthreddy2619/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/skatkoor" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+       <!-- Main -->
+<div id="main">
+        <!-- Delta Layer -->
+    <h2>Delta Layer:</h2>
+    <p>Delta Layer in Azure Synapse provides reliability to data lakes by addressing key challenges associated with traditional data lakes, focusing on data integrity, consistency, and reliability. Here's a clearer explanation of its features:</p>
+    <h3>ACID Transactional Capabilities:</h3>
+    <ul>
+        <li><strong>Atomicity:</strong> Transactions are treated as single units of operation, ensuring that either all operations within a transaction are fully completed or none are. Example: When transferring money using a banking app, both deducting from one account and crediting to another must either fully complete or fully roll back.</li>
+        <li><strong>Consistency:</strong> Data remains in a consistent state before and after transactions, adhering to predefined database schemas and rules. Example: In a ticket booking system, only one person successfully books a ticket for a movie (First to commit) even if multiple users try simultaneously, ensuring consistency.</li>
+        <li><strong>Isolation:</strong> Concurrent transactions do not interfere with each other, ensuring that the outcome of multiple simultaneous transactions is consistent with their sequential execution. Example: When two users simultaneously send money from their accounts, each transaction is processed independently to prevent interference.</li>
+        <li><strong>Durability:</strong> Committed transactions are permanently stored and not lost even in the event of system failure. Example: After a successful purchase on an e-commerce platform, transaction details are durably stored to ensure they can be recovered in case of a system crash.</li>
+    </ul>
+    <h3>Schema Enforcement and Evolution:</h3>
+    <ul>
+        <li>Delta Lake enforces predefined schemas to ensure data integrity and consistency, rejecting any data that doesn't adhere to the expected schema. Example: Delta Lake rejects files with structures that don't match the predefined schema, preventing inconsistent data from entering the lake.</li>
+        <li>Delta Lake supports schema evolution, allowing changes to the schema over time without disrupting existing data pipelines or risking data loss. Example: Changes to column types or the addition/removal of columns can be made to the schema without impacting ongoing data processes.</li>
+    </ul>
+    <h3>Time Travel:</h3>
+    <p>Delta Lake implements time travel functionality, enabling users to query previous versions of data stored in the lake. This feature is useful for auditing, debugging, and recovering from errors by accessing historical data snapshots.</p>
+    <h3>Optimizations for Scalability and Performance:</h3>
+    <p>Delta Lake employs various optimizations, including efficient data compaction, indexing, caching mechanisms, and handling large-scale workloads. These optimizations improve query performance, reduce resource utilization, and enhance scalability, making Delta Lake suitable for handling large-scale data processing workloads efficiently.</p>
+    <h3>Unified Batch and Streaming Processing:</h3>
+    <p>Delta Lake provides a unified platform for both batch and streaming processing, allowing seamless integration of real-time and batch data processing workflows.</p>
+</div>
+
+        <!-- Footer -->
+        <footer>
+            <!-- Your footer content goes here -->
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
