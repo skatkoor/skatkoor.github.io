@@ -7,6 +7,18 @@
     <!-- Include main.css -->
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Include any other CSS files if needed -->
+    <style>
+        /* Add CSS rule to remove bottom margin for all paragraphs */
+        p {
+            margin-bottom: 0;
+        }
+
+        /* Center the image horizontally */
+        #main img {
+            display: block; /* Ensure image is a block element */
+            margin: 0 auto; /* Set left and right margin to auto to horizontally center */
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -36,24 +48,21 @@
             </ul>
         </nav>
 
-       <!-- Main -->
-<div id="main">
-    <h1>synapse</h1>
-            
-    <p>Azure Synapse is an analytics service provided by Microsoft Azure that combines big data and data warehousing functionalities into a single platform, offering features such as data integration, data warehousing, big data analytics (enabling analysis of both structured and unstructured data), and real-time analytics (facilitated through integration with Azure Stream Analytics and Azure Databricks).</p>
-    
-    <p>In a scenario without Azure Synapse, data is collected from various sources and loaded into Azure Data Lake using Azure Data Factory, where pipelines are configured to manage the data ingestion process. Subsequently, big data analytics tools such as Apache Spark are employed to perform necessary transformations on the data. The processed data is then transferred to the data warehouse and subsequently utilized by services like Power BI.</p>
-    
-    <p>Azure Synapse combines the following functionalities:</p>
-    <ul>
-        <li>Enterprise Data Warehouse and Big Data Analytics</li>
-        <li>SQL Technologies utilized in SQL DW (Synapse SQL)</li>
-        <li>Spark Technologies utilized in Big Data (Apache Spark)</li>
-        <li>Pipelines for Data Integration and ETL/ELT (Azure Data Factory)</li>
-        <li>Integrations with Services like Power BI, Cosmos DB, Azure ML, etc.</li>
-    </ul>
-        <img src="https://skatkoor.github.io/images/SynapseArc.png" alt="Description of the image">
-     </div>
+        <!-- Main -->
+        <div id="main">
+            <h1>synapse</h1>
+            <p>Azure Synapse is an analytics service provided by Microsoft Azure that combines big data and data warehousing functionalities into a single platform, offering features such as data integration, data warehousing, big data analytics (enabling analysis of both structured and unstructured data), and real-time analytics (facilitated through integration with Azure Stream Analytics and Azure Databricks).</p>
+            <p>In a scenario without Azure Synapse, data is collected from various sources and loaded into Azure Data Lake using Azure Data Factory, where pipelines are configured to manage the data ingestion process. Subsequently, big data analytics tools such as Apache Spark are employed to perform necessary transformations on the data. The processed data is then transferred to the data warehouse and subsequently utilized by services like Power BI.</p>
+            <p>Azure Synapse combines the following functionalities:</p>
+            <ul>
+                <li>Enterprise Data Warehouse and Big Data Analytics</li>
+                <li>SQL Technologies utilized in SQL DW (Synapse SQL)</li>
+                <li>Spark Technologies utilized in Big Data (Apache Spark)</li>
+                <li>Pipelines for Data Integration and ETL/ELT (Azure Data Factory)</li>
+                <li>Integrations with Services like Power BI, Cosmos DB, Azure ML, etc.</li>
+            </ul>
+            <img src="https://skatkoor.github.io/images/SynapseArc.png" alt="Description of the image">
+        </div>
 
         <!-- Footer -->
         <footer>
