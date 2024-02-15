@@ -31,8 +31,8 @@
                 <li class="active"><a href="concepts.html">Concepts</a></li> <!-- Add this line for the Concepts section -->
             </ul>
             <ul class="icons">
-                <li><a href="https://www.linkedin.com/in/sumanthreddy2619/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                <li><a href="https://github.com/skatkoor" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.linkedin.com/in/sumanthreddy2619/" target= "_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/skatkoor" target= "_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
             </ul>
         </nav>
 
@@ -48,8 +48,18 @@
                 <li><a href="deep_learning.html">Deep Learning</a></li>
                 <li><a href="delta_lake.html">Delta Lake</a></li>
                 <li><a href="machine_learning.html">Machine Learning</a></li>
-                <li><a href="serverlesssqlpool.html">Serverless SQL Pool</a></li> <!-- New concept link -->
+                <li><a href="#serverlesssqlpool">Serverless SQL Pool</a></li> <!-- Anchor link for Serverless SQL Pool -->
             </ul>
+
+            <!-- Serverless SQL Pool Section -->
+            <section id="serverlesssqlpool">
+                <!-- Content for Serverless SQL Pool goes here -->
+                <h2>Serverless SQL Pool</h2>
+                <p>Content about Serverless SQL Pool...</p>
+                <!-- Add any additional content here -->
+            </section>
+            <!-- End Serverless SQL Pool Section -->
+
         </div>
 
         <!-- Footer -->
@@ -68,41 +78,5 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- Add PDF Viewer Script -->
-    <script src="build/pdf.js"></script>
-    <script>
-        // URL to your PDF file
-        var pdfUrl = 'https://github.com/skatkoor/skatkoor.github.io/raw/main/images/serverlesssqlpool.pdf';
-
-        // Specify PDF.js worker URL relative to the pdf.js file
-        PDFJS.workerSrc = 'build/pdf.worker.js';
-
-        // Fetch PDF document
-        PDFJS.getDocument(pdfUrl).then(function(pdf) {
-            // Render PDF pages
-            for (var pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
-                pdf.getPage(pageNumber).then(function(page) {
-                    var scale = 1.5;
-                    var viewport = page.getViewport({ scale: scale });
-
-                    // Prepare canvas
-                    var canvas = document.createElement('canvas');
-                    var context = canvas.getContext('2d');
-                    canvas.height = viewport.height;
-                    canvas.width = viewport.width;
-
-                    // Render PDF page to canvas
-                    var renderContext = {
-                        canvasContext: context,
-                        viewport: viewport
-                    };
-                    page.render(renderContext);
-
-                    // Append canvas to the PDF viewer
-                    document.getElementById('pdf-viewer').appendChild(canvas);
-                });
-            }
-        });
-    </script>
 </body>
 </html>
