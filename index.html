@@ -14,14 +14,13 @@
     <style>
         /* CSS to style the project containers */
         .project-container {
-            display: flex;
-            justify-content: space-between; /* Aligns the two project containers at the ends */
+            display: inline-block;
+            text-align: center; /* Center the project container */
             margin-bottom: 30px; /* Add margin for spacing between projects */
         }
 
-        .project-left,
-        .project-right {
-            width: calc(50% - 20px); /* Set the width of each project container to half of the available space */
+        .project-left {
+            width: 100%; /* Set the width of the project container to 100% */
             padding: 20px; /* Add padding for spacing */
             box-sizing: border-box; /* Include padding in the width calculation */
             background-color: #f9f9f9; /* Add background color for better readability */
@@ -83,24 +82,14 @@
         <div class="project-container">
             <!-- First Project -->
             <div class="project-left">
-                <h3>Bank Direct Marketing Data Analysis Using CRISP-DM Framework</h3>
+                <h3>Predicting Breast Cancer using Logistic Regression with Newton-Raphson Optimization</h3>
                 <ul>
-                    <li>Led a team in applying the CRISP-DM framework to preprocess a Bank Direct Marketing dataset</li>
-                    <li>Improved data integrity by 20% through attribute selection, cleaning, and derived attribute construction.</li>
-                    <li>Utilized logistic regression and J48 tree models on recoded data, achieving approximately 90.07% and 90.22% accuracy, respectively, with area under the ROC curve values of around 0.901 and 0.855.</li>
+                    <li>Implemented logistic regression model for breast cancer classification using both Newton’s method and Scikit-learn.</li>
+                    <li>Utilized correlation analysis to identify relevant features and optimize the model’s performance.</li>
+                    <li>Achieved an average accuracy of 95.65% with Newton’s method and 64.29% with Scikit-learn.</li>
                 </ul>
+                <a href="https://github.com/skatkoor/Newton-Raphson-Method-for-Logistic-Regression-/blob/main/Machine%20Learning%20Mini%20Project%202.ipynb" class="button" target="_blank">View Project</a>
             </div>
-
-            <!-- Second Project -->
-           <div class="project-right">
-    <h3>Predicting Breast Cancer using Logistic Regression with Newton-Raphson Optimization</h3>
-    <ul>
-        <li>Implemented logistic regression model for breast cancer classification using both Newton’s method and Scikit-learn.</li>
-        <li>Utilized correlation analysis to identify relevant features and optimize the model’s performance.</li>
-        <li>Achieved an average accuracy of 95.65% with Newton’s method and 64.29% with Scikit-learn.</li>
-    </ul>
-    <a href="https://github.com/skatkoor/Newton-Raphson-Method-for-Logistic-Regression-/blob/main/Machine%20Learning%20Mini%20Project%202.ipynb" class="button" target="_blank">View Project</a>
-</div>
         </div>
         <!-- End Project Containers -->
 
