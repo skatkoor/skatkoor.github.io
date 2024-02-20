@@ -1,114 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concepts - Sumanth Reddy</title>
-    <!-- Include main.css -->
+    <title>Concepts - Sumanth Reddy Data Scientist Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <!-- Include any other CSS files if needed -->
+    <!-- Additional styles may be required -->
     <style>
-        /* Add your custom CSS styles here */
-        body {
-            background-color: #fff; /* Set background color to white */
-            color: #333; /* Set text color to dark gray */
-            font-family: Arial, sans-serif; /* Set font family */
-        }
-        .fade-in {
-            background-color: #f9f9f9; /* Set background color of the wrapper to a light gray */
-            padding: 20px; /* Add some padding */
-            overflow: hidden; /* Hide content overflow */
-        }
-        .concept-list {
-            float: left;
-            width: 20%;
-            margin-right: 20px;
-        }
-        .concept-content {
-            overflow: hidden;
-        }
-        .concept-dropdown {
-            display: none;
-        }
-        /* Adjustments to ensure all content is visible */
-        #wrapper {
-            overflow: auto; /* Allow content overflow */
-        }
         #main {
-            width: calc(100% - 300px); /* Adjust width to fit content */
-            float: left; /* Float left to ensure proper layout */
+            display: flex;
+        }
+        #sidebar {
+            width: 20%;
+            background: #f9f9f9; /* Sample background color */
+            padding: 10px;
+        }
+        #content {
+            width: 80%;
+            padding: 10px;
+        }
+        /* Style for dropdown */
+        .dropdown {
+            cursor: pointer;
+            user-select: none;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        iframe {
+            width: 100%;
+            height: 600px; /* Adjust height as necessary */
+            border: none;
         }
     </style>
+    <!-- JavaScript for handling dropdown and iframe -->
+    <script>
+        function openPage(pageUrl) {
+            document.getElementById('content-frame').src = pageUrl;
+        }
+    </script>
 </head>
 <body class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
+    <!-- Similar header/nav as in main page -->
+    <!-- ... -->
 
-    <!-- Wrapper -->
-    <div id="wrapper" class="fade-in">
-
-        <!-- Intro -->
-        <div id="intro">
-            <h1>Sumanth Reddy Data Scientist Portfolio</h1>
-            <p>Data Scientist with MySQL/SQL Server, Excel, Power BI, Tableau, and Python skillset</p>
-        </div>
-
-        <!-- Header -->
-        <header id="header">
-            <a href="index.html" class="logo">Sumanth Katkoori Data Scientist</a>
-            <!-- Nav -->
-            <nav id="nav">
-                <ul class="links">
-                    <li><a href="index.html">Projects</a></li>
-                    <li class="active"><a href="concepts.html">Concepts</a></li> <!-- Add this line for the Concepts section -->
-                </ul>
-                <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/sumanthreddy2619/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://github.com/skatkoor" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Main -->
-        <div id="main">
-            <!-- Your content goes here -->
-            <h1>Concepts</h1>
-            <!-- Filter by title option -->
-            <input type="text" id="concept-filter" placeholder="Filter by title">
-            <!-- List of Concepts -->
-            <div class="concept-list">
-                <ul>
-                    <li><a href="#concept-1">Azure Synapse</a></li>
-                    <li><a href="#concept-2">Deep Learning</a></li>
-                    <li><a href="#concept-3">Delta Lake</a></li>
-                    <li><a href="#concept-4">Machine Learning</a></li>
-                    <li><a href="#concept-5">Serverless SQL Pools</a></li>
-                </ul>
+    <!-- Main -->
+    <div id="main">
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <!-- Dropdown for Azure Synapse -->
+            <div class="dropdown">
+                azure_synapse.html
+                <div class="dropdown-content">
+                    <a href="#" onclick="openPage('Control_Table.html');">Control_Table.html</a>
+                    <a href="#" onclick="openPage('https://skatkoor.github.io/images/Data Integration in Synapse.pdf');">Data Integration in Synapse PDF</a>
+                </div>
             </div>
-            <div class="concept-content">
-                <!-- Concept content will be displayed here -->
+            <!-- Dropdown for Deep Learning -->
+            <div class="dropdown">
+                deep_learning.html
+                <div class="dropdown-content">
+                    <!-- Add links to other HTMLs here -->
+                </div>
             </div>
         </div>
 
+        <!-- Content -->
+        <div id="content">
+            <iframe id="content-frame" name="content-frame" src=""></iframe>
+        </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script>
-        // JavaScript code for filtering concepts by title
-        $(document).ready(function(){
-            $("#concept-filter").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $(".concept-list ul li").filter(function() {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-            });
-            // JavaScript code for showing concept content
-            $(".concept-list ul li a").click(function(e) {
-                e.preventDefault();
-                var conceptId = $(this).attr("href");
-                $(".concept-dropdown").hide();
-                $(conceptId).show();
-            });
-        });
-    </script>
+    <!-- Footer -->
+    <!-- Similar footer as in main page -->
+    <!-- ... -->
+</div>
+
+<!-- Scripts -->
+<!-- Similar scripts as in main page -->
+<!-- ... -->
 </body>
 </html>
