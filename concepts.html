@@ -92,4 +92,33 @@
     <!-- Main -->
     <div id="main">
         <!-- Sidebar -->
-       
+        <div id="sidebar">
+            <!-- Dropdown for Azure Synapse -->
+            <div class="dropdown" onclick="toggleDropdown('azure_synapse_dropdown')">
+                1. Azure Synapse
+                <div id="azure_synapse_dropdown" class="dropdown-content">
+                    <ul class="index">
+                        <li><a href="azure_synapse.html#control_table">1.1 Control Table</a></li>
+                        <li><a href="azure_synapse.html#delta_lake">1.2 Delta Lake</a></li>
+                        <!-- Add more sub-sections as needed -->
+                    </ul>
+                </div>
+            </div>
+            <!-- Dropdown for Deep Learning -->
+            <div class="dropdown" onclick="toggleDropdown('deep_learning_dropdown')">
+                2. Deep Learning
+                <div id="deep_learning_dropdown" class="dropdown-content">
+                    <!-- Add links to other sub-sections -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div id="content">
+            <iframe id="content-frame" name="content-frame" src=""></iframe>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
