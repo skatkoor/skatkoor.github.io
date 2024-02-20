@@ -21,7 +21,7 @@
         #content {
             width: 80%;
             padding: 10px;
-            overflow: hidden; /* Disable content overflow */
+            overflow: auto; /* Allow content to scroll */
         }
         .dropdown {
             cursor: pointer;
@@ -46,26 +46,23 @@
         }
     </style>
     <script>
-        // JavaScript for handling dropdown and iframe resizing
+        // JavaScript for handling dropdown
         function toggleDropdown(dropdownId) {
             var dropdown = document.getElementById(dropdownId);
-            dropdown.classList.toggle('show');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
         }
         // Function to open pages and resize iframe according to its content
         function openPage(pageUrl) {
             var iframe = document.getElementById('content-frame');
             iframe.onload = function() {
-                this.style.height = this.contentWindow.document.documentElement.scrollHeight + 'px';
+                iframe.style.height = iframe.contentDocument.body.scrollHeight + 'px';
             };
             iframe.src = pageUrl;
         }
-        // Function to resize the iframe when the window is resized
-        window.onresize = function() {
-            var iframe = document.getElementById('content-frame');
-            if (iframe.src) {
-                iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
-            }
-        };
     </script>
 </head>
 <body class="is-preload">
