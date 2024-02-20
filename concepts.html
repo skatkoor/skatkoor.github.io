@@ -37,6 +37,13 @@
             height: 600px; /* Adjust height as necessary */
             border: none;
         }
+        .index {
+            margin-left: 20px;
+        }
+        .index li {
+            list-style-type: decimal;
+            margin-left: 20px;
+        }
     </style>
     <!-- JavaScript for handling dropdown and iframe -->
     <script>
@@ -75,25 +82,19 @@
         <div id="sidebar">
             <!-- Dropdown for Azure Synapse -->
             <div class="dropdown">
-                <span onclick="toggleDropdown('dropdown1')">Azure Synapse</span>
+                <span onclick="toggleDropdown('dropdown1')">1. Azure Synapse</span>
                 <div id="dropdown1" class="dropdown-content">
-                    <a href="#" onclick="openPage('Control_Table.html');">Control_Table.html</a>
-                    <a href="#" onclick="openPage('https://skatkoor.github.io/images/Data Integration in Synapse.pdf');">Data Integration in Synapse PDF</a>
-                    <ul>
-                        <li>Additional Link 1</li>
-                        <li>Additional Link 2</li>
+                    <ul class="index">
+                        <li><a href="#" onclick="openPage('Control_Table.html');">1.1 Control Table</a></li>
+                        <li><a href="#" onclick="openPage('Delta_Lake.html');">1.2 Delta Lake</a></li>
                     </ul>
                 </div>
             </div>
             <!-- Dropdown for Deep Learning -->
             <div class="dropdown">
-                <span onclick="toggleDropdown('dropdown2')">Deep Learning</span>
+                <span onclick="toggleDropdown('dropdown2')">2. Deep Learning</span>
                 <div id="dropdown2" class="dropdown-content">
                     <!-- Add links to other HTMLs here -->
-                    <ul>
-                        <li>Additional Link 1</li>
-                        <li>Additional Link 2</li>
-                    </ul>
                 </div>
             </div>
         </div>
