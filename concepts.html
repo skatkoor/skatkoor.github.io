@@ -12,6 +12,7 @@
         body {
             background-color: #fff; /* Set background color to white */
             color: #333; /* Set text color to dark gray */
+            font-family: Arial, sans-serif; /* Set font family */
         }
         .fade-in {
             background-color: #f9f9f9; /* Set background color of the wrapper to a light gray */
@@ -29,12 +30,42 @@
         .concept-dropdown {
             display: none;
         }
+        /* Adjustments to ensure all content is visible */
+        #wrapper {
+            overflow: auto; /* Allow content overflow */
+        }
+        #main {
+            width: calc(100% - 300px); /* Adjust width to fit content */
+            float: left; /* Float left to ensure proper layout */
+        }
     </style>
 </head>
 <body class="is-preload">
 
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
+
+        <!-- Intro -->
+        <div id="intro">
+            <h1>Sumanth Reddy Data Scientist Portfolio</h1>
+            <p>Data Scientist with MySQL/SQL Server, Excel, Power BI, Tableau, and Python skillset</p>
+        </div>
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Sumanth Katkoori Data Scientist</a>
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="index.html">Projects</a></li>
+                    <li class="active"><a href="concepts.html">Concepts</a></li> <!-- Add this line for the Concepts section -->
+                </ul>
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/sumanthreddy2619/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/skatkoor" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+            </nav>
+        </header>
 
         <!-- Main -->
         <div id="main">
@@ -53,31 +84,7 @@
                 </ul>
             </div>
             <div class="concept-content">
-                <!-- Concept 1: Azure Synapse -->
-                <div id="concept-1" class="concept-dropdown">
-                    <h2>Azure Synapse</h2>
-                    <p>This is the content for Azure Synapse.</p>
-                </div>
-                <!-- Concept 2: Deep Learning -->
-                <div id="concept-2" class="concept-dropdown">
-                    <h2>Deep Learning</h2>
-                    <p>This is the content for Deep Learning.</p>
-                </div>
-                <!-- Concept 3: Delta Lake -->
-                <div id="concept-3" class="concept-dropdown">
-                    <h2>Delta Lake</h2>
-                    <p>This is the content for Delta Lake.</p>
-                </div>
-                <!-- Concept 4: Machine Learning -->
-                <div id="concept-4" class="concept-dropdown">
-                    <h2>Machine Learning</h2>
-                    <p>This is the content for Machine Learning.</p>
-                </div>
-                <!-- Concept 5: Serverless SQL Pools -->
-                <div id="concept-5" class="concept-dropdown">
-                    <h2>Serverless SQL Pools</h2>
-                    <p>This is the content for Serverless SQL Pools.</p>
-                </div>
+                <!-- Concept content will be displayed here -->
             </div>
         </div>
 
