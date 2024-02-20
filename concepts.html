@@ -7,52 +7,66 @@
     <!-- Include main.css -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <!-- Include any other CSS files if needed -->
+    <style>
+        /* Add your custom CSS styles here */
+        .concept-list {
+            float: left;
+            width: 20%;
+            margin-right: 20px;
+        }
+        .concept-content {
+            overflow: hidden;
+        }
+        .concept-dropdown {
+            display: none;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
 
-        <!-- Intro -->
-        <div id="intro">
-            <h1>Sumanth Reddy Data Scientist Portfolio</h1>
-            <p>Data Scientist with MySQL/SQL Server, Excel, Power BI, Tableau, and Python skillset</p>
-        </div>
-
-        <!-- Header -->
-        <header id="header">
-            <a href="index.html" class="logo">Sumanth Katkoori Data Scientist</a>
-        </header>
-
-        <!-- Nav -->
-        <nav id="nav">
-            <ul class="links">
-                <li><a href="index.html">Projects</a></li>
-                <li class="active"><a href="concepts.html">Concepts</a></li> <!-- Add this line for the Concepts section -->
-            </ul>
-            <ul class="icons">
-                <li><a href="https://www.linkedin.com/in/sumanthreddy2619/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                <li><a href="https://github.com/skatkoor" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-            </ul>
-        </nav>
+        <!-- Intro, Header, Nav sections -->
 
         <!-- Main -->
         <div id="main">
             <!-- Your content goes here -->
             <h1>Concepts</h1>
-           
-           <!-- List of Concepts -->
-<ol class="concept-list">
-    <li><a href="azure_synapse.html"><strong>1. Azure Synapse</strong></a></li>
-    <li><a href="deep_learning.html"><strong>2. Deep Learning</strong></a></li>
-    <li><a href="delta_lake.html"><strong>3. Delta Lake</strong></a></li>
-    <li><a href="machine_learning.html"><strong>4. Machine Learning</strong></a></li>
-    <li><a href="https://skatkoor.github.io/images/serverlesssqlpool.pdf"><strong>5. Serverless SQL Pools</strong></a></li>
-</ol>
-
-                
-                <!-- Add more concepts as needed -->
-            </ul>
+            <!-- Filter by title option -->
+            <input type="text" id="concept-filter" placeholder="Filter by title">
+            <!-- List of Concepts -->
+            <div class="concept-list">
+                <ul>
+                    <li><a href="#concept-1">Azure Synapse</a></li>
+                    <li><a href="#concept-2">Deep Learning</a></li>
+                    <li><a href="#concept-3">Delta Lake</a></li>
+                    <li><a href="#concept-4">Machine Learning</a></li>
+                    <li><a href="#concept-5">Serverless SQL Pools</a></li>
+                </ul>
+            </div>
+            <div class="concept-content">
+                <!-- Concept 1: Azure Synapse -->
+                <div id="concept-1" class="concept-dropdown">
+                    <!-- HTML content for Azure Synapse concept -->
+                </div>
+                <!-- Concept 2: Deep Learning -->
+                <div id="concept-2" class="concept-dropdown">
+                    <!-- HTML content for Deep Learning concept -->
+                </div>
+                <!-- Concept 3: Delta Lake -->
+                <div id="concept-3" class="concept-dropdown">
+                    <!-- HTML content for Delta Lake concept -->
+                </div>
+                <!-- Concept 4: Machine Learning -->
+                <div id="concept-4" class="concept-dropdown">
+                    <!-- HTML content for Machine Learning concept -->
+                </div>
+                <!-- Concept 5: Serverless SQL Pools -->
+                <div id="concept-5" class="concept-dropdown">
+                    <!-- HTML content for Serverless SQL Pools concept -->
+                </div>
+            </div>
         </div>
 
         <!-- Footer -->
@@ -70,6 +84,16 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <script>
+        // JavaScript code for filtering concepts by title
+        $(document).ready(function(){
+            $("#concept-filter").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $(".concept-list ul li").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 </body>
 </html>
