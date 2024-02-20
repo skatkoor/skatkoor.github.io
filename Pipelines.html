@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><span class="bold">Pipelines in Azure Synapse</span></title>
+<style>
+  body {
+    font-family: "Aptos", sans-serif;
+    font-size: 14px;
+    background-color: #e0f7fa;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  h1, h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  h2 {
+    text-decoration: underline;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  .bold {
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<h1><span class="bold">Pipelines in Azure Synapse</span></h1>
+<ul>
+  <li><span class="bold">What are the Pipelines in Azure Synapse?</span>
+    <ul>
+      <li>Pipelines automate the process of moving and transforming data from various sources to destinations.</li>
+      <li>A pipeline takes data, performs operations on it and delivers it to a storage location or data service.</li>
+    </ul>
+  </li>
+  <li><span class="bold">Why do we need Pipelines?</span>
+    <ul>
+      <li>Pipelines are essential for 
+        <ol>
+          <li>Automating repetitive and complex data processes.</li>
+          <li>Ensuring data is moved and transformed reliably and efficiently (<span class="bold">without any errors and time consumption, takes advantage of parallel processing and other optimizations to reduce execution time and resources</span>).</li>
+          <li>Reducing manual errors in data handling (<span class="bold">By defining data transformation logic within pipelines, we can standardize the data processing procedures and reduce the likelihood of errors caused by inconsistent data handling practices</span>).</li>
+          <li>Orchestrating and scheduling multiple data tasks to work together seamlessly. (<span class="bold">Can be scheduled to run at specific times or in response to certain events</span>).</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 class="bold">Types of pipelines</h2>
+<ul>
+  <li>Data ingestion pipelines: In case we want to pull data from sources like SAP, Salesforce, or flat files into Azure SQL Database.</li>
+  <li>Data transformation pipelines: To process and convert raw data into a structed format that’s ready for analysis.</li>
+  <li>Data movement pipelines: To transfer data from places like SQL databases to places like Azure Storage Gen 2</li>
+  <li>Data Orchestration pipelines: To coordinate sequence of tasks, like moving data to synapse notebooks or pools.</li>
+</ul>
+
+<h2 class="bold">Concepts to know in pipelines creation</h2>
+<ul>
+  <li><span class="bold">Activities:</span> These are the individual steps or tasks within a pipeline, such as copying data, running a stored procedure, or executing a notebook.</li>
+  <li><span class="bold">Parameters:</span> Define values that can be passed to a pipeline to make it dynamic and reusable. For example, suppose we have a pipeline that copies data from a source to a destination. By using parameters to define the source and destination locations, we can reuse the sane pipeline to copy data between different source-destination pairs without having to create different pipelines for each combination.</li>
+  <li><span class="bold">Triggers:</span> These schedule when a pipeline should run, like a specific time or in response to any event.</li>
+  <li><span class="bold">Debugging:</span> Testing the pipeline to ensure it works as expected before publishing.</li>
+</ul>
+
+<h2 class="bold">How to Create Pipelines Step by Step:</h2>
+<ul>
+  <li>Open Azure Synapse Studio and navigate to the "Integrate" hub.</li>
+  <li>Click "+ New pipeline" to start creating a new pipeline.</li>
+  <li>Drag and drop activities onto the canvas to define what the pipeline should do.</li>
+  <li>Configure each activity with the required details, such as source and destination, and any transformation logic.</li>
+  <li>Use parameters to make the pipeline flexible and capable of handling different datasets or schedules.</li>
+  <li>Set up triggers to automate the pipeline execution based on your requirements.</li>
+  <li>Use the "Debug" feature to test the pipeline and ensure it's working correctly.</li>
+  <li>Publish the pipeline once you're satisfied with its configuration and operation.</li>
+</ul>
+
+<h2 class="bold">Types of activities</h2>
+<ul>
+  <li><span class="bold">Data Movement Activities:</span> These activities are used to move data between different data stores or destinations. Examples include:</li>
+  <li><span class="bold">Data Transformation Activities:</span> These activities are used to transform data as it moves through the pipeline. Examples include:</li>
+  <li><span class="bold">Control Flow Activities:</span> These activities are used to control the flow of execution within the pipeline. Examples include:</li>
+  <li><span class="bold">Integration Runtime Activities:</span> These activities are used to manage integration runtimes, which are the compute resources used to execute data movement and transformation activities. Examples include:</li>
+  <li><span class="bold">Custom Activities:</span> Custom activities allow you to extend the capabilities of pipelines by integrating with external systems or running custom code. Examples include:</li>
+  <li><span class="bold">Data Validation Activities:</span> These activities are used to validate data integrity or perform quality checks on the data. Examples include:</li>
+</ul>
+
+</body>
+</html>
