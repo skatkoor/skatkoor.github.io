@@ -16,6 +16,7 @@
         .fade-in {
             background-color: #f9f9f9; /* Set background color of the wrapper to a light gray */
             padding: 20px; /* Add some padding */
+            overflow: hidden; /* Hide content overflow */
         }
         .concept-list {
             float: left;
@@ -34,8 +35,6 @@
 
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
-
-        <!-- Intro, Header, Nav sections -->
 
         <!-- Main -->
         <div id="main">
@@ -56,42 +55,36 @@
             <div class="concept-content">
                 <!-- Concept 1: Azure Synapse -->
                 <div id="concept-1" class="concept-dropdown">
-                    <!-- HTML content for Azure Synapse concept -->
+                    <h2>Azure Synapse</h2>
+                    <p>This is the content for Azure Synapse.</p>
                 </div>
                 <!-- Concept 2: Deep Learning -->
                 <div id="concept-2" class="concept-dropdown">
-                    <!-- HTML content for Deep Learning concept -->
+                    <h2>Deep Learning</h2>
+                    <p>This is the content for Deep Learning.</p>
                 </div>
                 <!-- Concept 3: Delta Lake -->
                 <div id="concept-3" class="concept-dropdown">
-                    <!-- HTML content for Delta Lake concept -->
+                    <h2>Delta Lake</h2>
+                    <p>This is the content for Delta Lake.</p>
                 </div>
                 <!-- Concept 4: Machine Learning -->
                 <div id="concept-4" class="concept-dropdown">
-                    <!-- HTML content for Machine Learning concept -->
+                    <h2>Machine Learning</h2>
+                    <p>This is the content for Machine Learning.</p>
                 </div>
                 <!-- Concept 5: Serverless SQL Pools -->
                 <div id="concept-5" class="concept-dropdown">
-                    <!-- HTML content for Serverless SQL Pools concept -->
+                    <h2>Serverless SQL Pools</h2>
+                    <p>This is the content for Serverless SQL Pools.</p>
                 </div>
             </div>
         </div>
-
-        <!-- Footer -->
-        <footer>
-            <!-- Your footer content goes here -->
-        </footer>
 
     </div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
     <script>
         // JavaScript code for filtering concepts by title
         $(document).ready(function(){
@@ -100,6 +93,13 @@
                 $(".concept-list ul li").filter(function() {
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
+            });
+            // JavaScript code for showing concept content
+            $(".concept-list ul li a").click(function(e) {
+                e.preventDefault();
+                var conceptId = $(this).attr("href");
+                $(".concept-dropdown").hide();
+                $(conceptId).show();
             });
         });
     </script>
