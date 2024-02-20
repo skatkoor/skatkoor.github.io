@@ -51,7 +51,7 @@
             <h2>Control Tables</h2>
             <!-- Article Preview -->
             <dl>
-                <dt><strong>{Control Tables:}</strong></dt>
+                <dt><strong>Control Tables:</strong></dt>
                 <dd>
                     <ul>
                         <li><strong>A Control Table</strong> is a database table that acts as a central reference point within an ETL process or data pipeline.</li>
@@ -59,11 +59,11 @@
                         <li><strong>In the context</strong> of Data Integration and processing workflows, like the ones involved in Azure Synapse and various data sources, <strong>a control table</strong> typically holds the metadata about the data being processed rather than the data itself.</li>
                     </ul>
                 </dd>
-                <dt><strong>{Control Table – Purpose and Metadata}</strong></dt>
+                <dt><strong>Control Table – Purpose and Metadata</strong></dt>
                 <dd>
                     <ol>
-                        <li><strong>{Job Control:}</strong> It keeps track of different data processing jobs, their schedules, statuses. This helps in orchestrating the ETL process. (Helps in ensuring they run in the right order).</li>
-                        <li><strong>{Execution Metadata:}</strong> It records metadata such as:</li>
+                        <li><strong>Job Control:</strong> It keeps track of different data processing jobs, their schedules, statuses. This helps in orchestrating the ETL process. (Helps in ensuring they run in the right order).</li>
+                        <li><strong>Execution Metadata:</strong> It records metadata such as:</li>
                         <ul>
                             <li>Job identifiers or names (unique name or identifiers assigned to individual data processing jobs within the ETL flow.)</li>
                             <li>Last Run Timestamps to know when a job was last executed.</li>
@@ -71,27 +71,27 @@
                             <li>Source filenames or identifiers, especially while dealing with multiple sources or files.</li>
                             <li>Raw counts or data volumes processed to keep a log of how much data was ingested or manipulated.</li>
                         </ul>
-                        <li><strong>{Parameters and Configuration:}</strong> It might store parameters that might be needed for the execution of specific jobs, like file paths, source system identifiers, or transformation rules.</li>
+                        <li><strong>Parameters and Configuration:</strong> It might store parameters that might be needed for the execution of specific jobs, like file paths, source system identifiers, or transformation rules.</li>
                     </ol>
                 </dd>
-                <dt><strong>{Audit Trail:}</strong></dt>
+                <dt><strong>Audit Trail:</strong></dt>
                 <dd>Enables tracking of what data is moved, transformed, or loaded at any given time.</dd>
-                <dt><strong>{Interaction between Control Tables and Stored Procedures.}</strong></dt>
+                <dt><strong>Interaction between Control Tables and Stored Procedures.</strong></dt>
                 <dd>
                     <ol>
-                        <li><strong>{Before Data Processing}:</strong> A Synapse Pipeline might consult the Control Table to determine which data sources need to be processed based on the schedule or last execution date.</li>
-                        <li><strong>{After Data Processing}:</strong> Once the data is processed, a stored procedure is called to update the Control Table with the new execution timestamp, status of the run, and any other relevant metadata.</li>
-                        <li><strong>{Error Handling}:</strong> If an error occurs during processing, a stored procedure might be used to log error details into the control table or a separate error log table.</li>
+                        <li><strong>Before Data Processing:</strong> A Synapse Pipeline might consult the Control Table to determine which data sources need to be processed based on the schedule or last execution date.</li>
+                        <li><strong>After Data Processing:</strong> Once the data is processed, a stored procedure is called to update the Control Table with the new execution timestamp, status of the run, and any other relevant metadata.</li>
+                        <li><strong>Error Handling:</strong> If an error occurs during processing, a stored procedure might be used to log error details into the control table or a separate error log table.</li>
                     </ol>
                 </dd>
-                <dt><strong>{Actual Data Handling:}</strong></dt>
+                <dt><strong>Actual Data Handling:</strong></dt>
                 <dd>
                     <ol>
                         <li>The control table itself does not store actual data from the data sources. The raw data or processed data is usually stored in different tables or data storage systems like Azure Data Lake Gen 2 in our scenario.</li>
                         <li>The control table is strictly for mapping the ETL process, not for storing the data being processed.</li>
                     </ol>
                 </dd>
-                <dt><strong>{Summary:}</strong></dt>
+                <dt><strong>Summary:</strong></dt>
                 <dd>
                     <ol>
                         <li>In summary, the control table in our ETL workflow is like the conductor of an orchestra, ensuring each section (data source, transformation jobs, etc.) knows when to play its part.</li>
