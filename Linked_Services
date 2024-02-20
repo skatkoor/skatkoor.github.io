@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked Services in Azure Synapse</title>
+    <style>
+        body {
+            font-family: "Aptos", sans-serif;
+            font-size: 16px;
+            background-color: #e0f7fa;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        h2 {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Linked Services in Azure Synapse</h1>
+
+<h2 class="bold">1. What are Linked Services?</h2>
+<ul>
+    <li><span class="bold">They are essentially definitions that encapsulate the connection information needed for Synapse to connect to external resources.</span></li>
+    <li>Consider Linked Services like the address book in your phone. Each entry in your address book contains the information needed to connect with a friend -like phone number and email address. Similarly, a linked service in Azure Synapse Analytics contains the information needed to connect to an external source or service – like a server name, database name, and credentials (username and password)</li>
+</ul>
+
+<h2 class="bold">2. Why do we need Linked Services?</h2>
+<ul>
+    <li><span class="bold">When you want to do something with your data- whether it’s moving it, transforming it, or analyzing it -you need a way to tell Azure Synapse where that data is and how to securely connect to it.</span></li>
+    <li>Linked Service provides these details acting as the “contact details” that Synapse uses to find and connect with your data.</li>
+</ul>
+
+<h2 class="bold">3. How are they different from Pipelines?</h2>
+<ul>
+    <li><span class="bold">Linked Services are like contact details or address books. They don’t do anything on their own; they just provide the connection information.</span></li>
+    <li>Pipelines are like a series of tasks or to-do lists. They use the contact details in the Linked Services to carry out actions on the data, such as moving it from one place to another or transforming it into a different format.</li>
+</ul>
+
+<h2 class="bold">4. When do we need multiple Linked Services?</h2>
+<ul>
+    <li><span class="bold">We don’t need a separate Linked Service for every scenario. We need one for each data store or destination.</span> For example:
+        <ul>
+            <li>If all the flat files are in the same Azure Blob Storage account, we just need one Linked Service for Azure Blob Storage.</li>
+            <li>If we have two SAP systems (Like a production system and a test system), we need two linked services – one for each system because they might have different connection details.</li>
+        </ul>
+    </li>
+</ul>
+
+</body>
+</html>
