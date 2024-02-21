@@ -62,5 +62,53 @@
     </li>
 </ul>
 
+<h2 class="bold">5. Parameterization of a Linked Service:</h2>
+<ul>
+    <li><span class="bold">Instead of having a fixed configuration in our linked service, we can use parameters to change certain values at run time. This is especially useful when we have multiple databases on the same server or similar environments where the connection details only vary slightly.</span></li>
+</ul>
+
+<h2 class="bold">6. Understanding Parameterization:</h2>
+<ul>
+    <li><span class="bold">Let’s say we have a database server with 10 different databases. If we were to create a linked service In the traditional way, we would have to create 10 separate linked services, each pointing to one of the databases.</span></li>
+    <li><span class="bold">However, with parameterization, we can create a single linked service and change the target database dynamically when we run the pipelines.</span></li>
+</ul>
+
+<h2 class="bold">7. How to parameterize a linked service:</h2>
+<ul>
+    <li><span class="bold">Create a new linked service:</span>
+        <ol>
+            <li>In Synapse Studio, go to “manage” hub and select “linked service”.</li>
+            <li>Click on “+new” to create a new linked service.</li>
+            <li>Choose the type of data store, such as Azure SQL Database.</li>
+        </ol>
+    </li>
+    <li><span class="bold">Add parameters:</span>
+        <ol>
+            <li>In the linked Service creation form, we will be prompted to enter details like the server name and database name.</li>
+            <li>To parameterize the database name, click on “Add dynamic content”.</li>
+            <li>Create a new parameter (e.g. Database name) and use this parameter in place of the actual database name field.</li>
+        </ol>
+    </li>
+    <li><span class="bold">Set Parameters value:</span>
+        <ol>
+            <li>After creating the parameterized linked service, we can pass different values to the databaseName parameter when we use the linked service in a pipeline.</li>
+            <li>This allows us to use the same linked service to connect to any of the 10 databases dynamically in this case.</li>
+        </ol>
+    </li>
+    <li><span class="bold">Parameterize other values:</span>
+        <ol>
+            <li>We can also parameterize other connection properties like the server’s name, username, and password if needed.</li>
+            <li>This is useful if we have multiple servers or if we have different credentials for different scenarios or environments.</li>
+        </ol>
+    </li>
+</ul>
+
+<h2 class="bold">8. Best Practices for parameterization.</h2>
+<ul>
+    <li><span class="bold">Use the parameters for pipelines that change frequently or differ between environments (Development, test, Production).</span></li>
+    <li><span class="bold">Store sensitive information like passwords in Azure Key Vault and reference them in the linked service parameters to enhance security.</span></li>
+    <li><span class="bold">Avoid hardcoding values that may change or need to be different in different contexts.</span></li>
+</ul>
+
 </body>
 </html>
