@@ -57,15 +57,15 @@
 <h2 class="bold">Types of pipelines</h2>
 <ul>
   <li>Data ingestion pipelines: In case we want to pull data from sources like SAP, Salesforce, or flat files into Azure SQL Database.</li>
-  <li>Data transformation pipelines: To process and convert raw data into a structed format that’s ready for analysis.</li>
+  <li>Data transformation pipelines: To process and convert raw data into a structured format that’s ready for analysis.</li>
   <li>Data movement pipelines: To transfer data from places like SQL databases to places like Azure Storage Gen 2</li>
-  <li>Data Orchestration pipelines: To coordinate sequence of tasks, like moving data to synapse notebooks or pools.</li>
+  <li>Data Orchestration pipelines: To coordinate the sequence of tasks, like moving data to synapse notebooks or pools.</li>
 </ul>
 
 <h2 class="bold">Concepts to know in pipelines creation</h2>
 <ul>
   <li><span class="bold">Activities:</span> These are the individual steps or tasks within a pipeline, such as copying data, running a stored procedure, or executing a notebook.</li>
-  <li><span class="bold">Parameters:</span> Define values that can be passed to a pipeline to make it dynamic and reusable. For example, suppose we have a pipeline that copies data from a source to a destination. By using parameters to define the source and destination locations, we can reuse the sane pipeline to copy data between different source-destination pairs without having to create different pipelines for each combination.</li>
+  <li><span class="bold">Parameters:</span> Define values that can be passed to a pipeline to make it dynamic and reusable. For example, suppose we have a pipeline that copies data from a source to a destination. By using parameters to define the source and destination locations, we can reuse the same pipeline to copy data between different source-destination pairs without having to create different pipelines for each combination.</li>
   <li><span class="bold">Triggers:</span> These schedule when a pipeline should run, like a specific time or in response to any event.</li>
   <li><span class="bold">Debugging:</span> Testing the pipeline to ensure it works as expected before publishing.</li>
 </ul>
@@ -84,12 +84,44 @@
 
 <h2 class="bold">Types of activities</h2>
 <ul>
-  <li><span class="bold">Data Movement Activities:</span> These activities are used to move data between different data stores or destinations. Examples include:</li>
-  <li><span class="bold">Data Transformation Activities:</span> These activities are used to transform data as it moves through the pipeline. Examples include:</li>
-  <li><span class="bold">Control Flow Activities:</span> These activities are used to control the flow of execution within the pipeline. Examples include:</li>
-  <li><span class="bold">Integration Runtime Activities:</span> These activities are used to manage integration runtimes, which are the compute resources used to execute data movement and transformation activities. Examples include:</li>
-  <li><span class="bold">Custom Activities:</span> Custom activities allow you to extend the capabilities of pipelines by integrating with external systems or running custom code. Examples include:</li>
-  <li><span class="bold">Data Validation Activities:</span> These activities are used to validate data integrity or perform quality checks on the data. Examples include:</li>
+  <li><span class="bold">Data Movement Activities:</span> These activities are used to move data between different data stores or destinations. Examples include:
+    <ul>
+      <li><span class="bold">Copy Data:</span> Moves data from a source to a destination, such as from an Azure Blob Storage to an Azure SQL Database.</li>
+      <li><span class="bold">Azure Data Lake Storage:</span> Reads or writes data to/from Azure Data Lake Storage.</li>
+      <li><span class="bold">Azure Synapse Analytics:</span> Reads or writes data to/from Azure Synapse Analytics (formerly Azure SQL Data Warehouse).</li>
+    </ul>
+  </li>
+  <li><span class="bold">Data Transformation Activities:</span> These activities are used to transform data as it moves through the pipeline. Examples include:
+    <ul>
+      <li><span class="bold">Data Flow:</span> Performs data transformations using a visual interface or code-based transformations.</li>
+      <li><span class="bold">Databricks Notebook:</span> Executes a Databricks notebook to perform complex data transformations using Apache Spark.</li>
+    </ul>
+  </li>
+  <li><span class="bold">Control Flow Activities:</span> These activities are used to control the flow of execution within the pipeline. Examples include:
+    <ul>
+      <li><span class="bold">Execute Pipeline:</span> Executes another pipeline within the current pipeline.</li>
+      <li><span class="bold">Conditional Execution:</span> Executes activities conditionally based on certain criteria.</li>
+      <li><span class="bold">ForEach Loop:</span> Iterates over a collection and executes activities for each item in the collection.</li>
+    </ul>
+  </li>
+  <li><span class="bold">Integration Runtime Activities:</span> These activities are used to manage integration runtimes, which are the compute resources used to execute data movement and transformation activities. Examples include:
+    <ul>
+      <li><span class="bold">Integration Runtime Upgrade:</span> Upgrades the version of an integration runtime.</li>
+      <li><span class="bold">Integration Runtime Restart:</span> Restarts an integration runtime.</li>
+    </ul>
+  </li>
+  <li><span class="bold">Custom Activities:</span> Custom activities allow you to extend the capabilities of pipelines by integrating with external systems or running custom code. Examples include:
+    <ul>
+      <li><span class="bold">Azure Function:</span> Executes an Azure Function to perform custom logic.</li>
+      <li><span class="bold">Web Activity:</span> Calls a REST API to interact with external systems.</li>
+    </ul>
+  </li>
+  <li><span class="bold">Data Validation Activities:</span> These activities are used to validate data integrity or perform quality checks on the data. Examples include:
+    <ul>
+      <li><span class="bold">Data Profiling:</span> Generates statistics and insights about the data.</li>
+      <li><span class="bold">Data Comparison:</span> Compares data between different sources to identify discrepancies.</li>
+    </ul>
+  </li>
 </ul>
 
 </body>
