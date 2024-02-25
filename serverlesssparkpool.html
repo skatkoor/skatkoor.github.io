@@ -88,7 +88,7 @@ When utilizing a <span class="bold">Serverless Spark Pool</span>, Azure takes ca
 </ul>
 
 <h2>RDD (Resilient Distributed Dataset):</h2>
-  <p>RDD stands for Resilient Distributed Dataset, and it's a fundamental data structure in Apache Spark. RDDs are immutable collections of objects that are distributed across multiple nodes in a cluster and can be processed in parallel. Here's a detailed explanation of RDDs:</p>
+  <p> RDD stands for Resilient Distributed Dataset, and it's a fundamental data structure in Apache Spark. RDDs are immutable collections of objects that are distributed across multiple nodes in a cluster and can be processed in parallel. Here's a detailed explanation of RDDs:</p>
 <ul>
   <li><span class="bold">Resilient:</span> RDDs are resilient because they can automatically recover from failures. If a partition of an RDD is lost due to a node failure, Spark can reconstruct that partition by using lineage information and recompute the lost partition.</li>
   <li><span class="bold">Distributed:</span> RDDs are distributed across multiple nodes in a Spark cluster. Each RDD is divided into one or more partitions, and these partitions are distributed across the available nodes in the cluster.</li>
@@ -98,8 +98,9 @@ When utilizing a <span class="bold">Serverless Spark Pool</span>, Azure takes ca
   <li><span class="bold">Lazy Evaluation:</span> Spark uses lazy evaluation to optimize the execution of RDD operations.</li>
   <li><span class="bold">Cacheable:</span> RDDs can be cached in memory to improve performance.</li>
 </ul>
-
+<p> Overall, RDDs provide a powerful abstraction for distributed data processing in Spark, enabling fault-tolerant and parallel processing of large-scale datasets across distributed clusters. They serve as the foundation for building high-level abstractions like Data Frames and Datasets in Spark. </p>
 <h2>DAG (Directed Acyclic Graph):</h2>
+  <p>A Directed Acyclic Graph (DAG) is a data structure used by Apache Spark to represent the sequence of computations or transformations to be applied to data in a distributed computing environment. Here's a detailed explanation of DAG:</p>
 <ul>
   <li><span class="bold">Directed Graph:</span> A DAG is a type of graph where edges have a direction associated with them.</li>
   <li><span class="bold">Acyclic:</span> Acyclic means that there are no cycles in the graph, i.e., it is not possible to start at a vertex and follow a sequence of directed edges to return to the same vertex.</li>
@@ -109,7 +110,7 @@ When utilizing a <span class="bold">Serverless Spark Pool</span>, Azure takes ca
   <li><span class="bold">Lazy Evaluation:</span> Spark's lazy evaluation strategy is closely tied to the DAG.</li>
   <li><span class="bold">Execution Plan:</span> Once the DAG is constructed, Spark uses it to create an execution plan.</li>
 </ul>
-
+<p>Overall, the Directed Acyclic Graph (DAG) is a critical component of Spark's execution model, providing a structured representation of the dataflow and transformations applied to data, which enables efficient and optimized parallel execution of computations in a distributed environment.</p>
 <!-- ... The analogy about Spark Pool Pavilion ... -->
 <h2><span class="bold">Example Scenario based story</span></h2>
 <p>
