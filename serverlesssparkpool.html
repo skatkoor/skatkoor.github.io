@@ -88,6 +88,7 @@ When utilizing a <span class="bold">Serverless Spark Pool</span>, Azure takes ca
 </ul>
 
 <h2>RDD (Resilient Distributed Dataset):</h2>
+  <p>RDD stands for Resilient Distributed Dataset, and it's a fundamental data structure in Apache Spark. RDDs are immutable collections of objects that are distributed across multiple nodes in a cluster and can be processed in parallel. Here's a detailed explanation of RDDs:</p>
 <ul>
   <li><span class="bold">Resilient:</span> RDDs are resilient because they can automatically recover from failures. If a partition of an RDD is lost due to a node failure, Spark can reconstruct that partition by using lineage information and recompute the lost partition.</li>
   <li><span class="bold">Distributed:</span> RDDs are distributed across multiple nodes in a Spark cluster. Each RDD is divided into one or more partitions, and these partitions are distributed across the available nodes in the cluster.</li>
