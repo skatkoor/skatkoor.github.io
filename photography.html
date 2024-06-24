@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .video-container {
+            display: flex;
+            justify-content: center; /* Center the video horizontally */
+            margin-top: 20px; /* Add some top margin for spacing */
+        }
+
+        .video-container iframe {
+            max-width: 100%; /* Make sure the iframe is responsive */
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -15,7 +26,7 @@
     <!-- Intro -->
     <div id="intro">
         <h1>Photography</h1>
-        <p>Check out my YouTube channel and watch my latest video below!</p>
+        <p>Explore my YouTube channel and watch my latest video below!</p>
     </div>
 
     <!-- Header -->
@@ -37,22 +48,22 @@
 
     <!-- Main -->
     <div id="main">
-        <!-- YouTube Channel Link -->
-        <section>
+        <!-- Featured Post -->
+        <article class="post featured">
             <header class="major">
                 <h2><a href="https://www.youtube.com/channel/UCC59SR_cTXosOwq4VW8LURw" target="_blank">Visit My YouTube Channel</a></h2>
             </header>
-        </section>
+        </article>
 
         <!-- Embedded YouTube Video -->
-        <section>
+        <article class="post">
             <header class="major">
                 <h2>My Latest Video</h2>
             </header>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/fmJ5eRLnMHk" frameborder="0" allowfullscreen></iframe>
             </div>
-        </section>
+        </article>
     </div>
 
     <!-- Footer -->
