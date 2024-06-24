@@ -14,7 +14,12 @@
         }
 
         .video-container iframe {
-            max-width: 100%; /* Make sure the iframe is responsive */
+            width: 80%; /* Make the iframe wider */
+            height: 450px; /* Increase the height of the iframe */
+        }
+
+        .small-text {
+            font-size: 1.2em; /* Smaller text size */
         }
     </style>
 </head>
@@ -25,8 +30,8 @@
 
     <!-- Intro -->
     <div id="intro">
-        <h1>Photography</h1>
-        <p>Explore my YouTube channel and watch my latest video below!</p>
+        <h1 class="small-text">Photography</h1>
+        <p class="small-text">Explore my YouTube channel and watch my latest wedding video below!</p>
     </div>
 
     <!-- Header -->
@@ -52,17 +57,17 @@
         <!-- Featured Post -->
         <article class="post featured">
             <header class="major">
-                <h2><a href="https://www.youtube.com/channel/UCC59SR_cTXosOwq4VW8LURw" target="_blank">Visit My YouTube Channel</a></h2>
+                <h2 class="small-text"><a href="https://www.youtube.com/channel/UCC59SR_cTXosOwq4VW8LURw" target="_blank">Visit My YouTube Channel</a></h2>
             </header>
         </article>
 
         <!-- Embedded YouTube Video -->
         <article class="post">
             <header class="major">
-                <h2>My Latest Video</h2>
+                <h2 class="small-text">My Latest Wedding Video</h2>
             </header>
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/fmJ5eRLnMHk" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/fmJ5eRLnMHk" frameborder="0" allowfullscreen></iframe>
             </div>
         </article>
     </div>
