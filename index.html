@@ -26,6 +26,17 @@
             box-sizing: border-box; /* Include padding in the width calculation */
             background-color: #f9f9f9; /* Add background color for better readability */
         }
+
+        /* Add this CSS rule to remove or reduce the top space */
+        #intro {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        /* Adjust this rule if the space is still there */
+        body.is-preload #intro {
+            display: none;
+        }
     </style>
 </head>
 <body class="is-preload">
