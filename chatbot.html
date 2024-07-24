@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot - Sumanth Reddy Katkoori</title>
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        .chatbot-container {
+            width: 100%;
+            height: 600px;
+            margin-top: 20px;
+        }
+        .chatbot-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body class="is-preload">
     <!-- Wrapper -->
@@ -21,7 +33,11 @@
                 <li><a href="photography.html">Photography</a></li>
                 <li class="active"><a href="chatbot.html">Chatbot</a></li>
             </ul>
-            <!-- ... social icons ... -->
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/sumanthreddy2619/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/skatkoor" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.youtube.com/channel/UCC59SR_cTXosOwq4VW8LURw" target="_blank" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+            </ul>
         </nav>
 
         <!-- Main -->
@@ -30,10 +46,10 @@
                 <header class="major">
                     <h1>My AI Chatbot</h1>
                 </header>
-                <p>Experience my AI-powered chatbot. Click the button below to start chatting!</p>
-                <ul class="actions">
-                    <li><a href="https://chatbotskatkoor-bd76424fe6cc.herokuapp.com/" class="button large" target="_blank">Launch Chatbot</a></li>
-                </ul>
+                <p>Interact with my AI-powered chatbot below:</p>
+                <div class="chatbot-container">
+                    <iframe src="https://chatbotskatkoor-bd76424fe6cc.herokuapp.com/" class="chatbot-frame"></iframe>
+                </div>
             </section>
         </div>
 
