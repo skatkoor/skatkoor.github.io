@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-    Massively by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html lang="en">
 <head>
     <title>Sumanth Reddy Katkoori</title>
@@ -12,28 +7,22 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* CSS to style the project containers */
         .project-container {
             display: flex;
-            justify-content: space-between; /* Aligns the two project containers at the ends */
-            margin-bottom: 30px; /* Add margin for spacing between projects */
+            justify-content: space-between;
+            margin-bottom: 30px;
         }
-
         .project-left,
         .project-right {
-            width: calc(50% - 20px); /* Set the width of each project container to half of the available space */
-            padding: 20px; /* Add padding for spacing */
-            box-sizing: border-box; /* Include padding in the width calculation */
-            background-color: #f9f9f9; /* Add background color for better readability */
+            width: calc(50% - 20px);
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
         }
-
-        /* Add this CSS rule to remove or reduce the top space */
         #intro {
             margin-top: 0;
             padding-top: 0;
         }
-
-        /* Adjust this rule if the space is still there */
         body.is-preload #intro {
             display: none;
         }
@@ -41,27 +30,23 @@
 </head>
 <body class="is-preload">
 
-<!-- Wrapper -->
 <div id="wrapper" class="fade-in">
 
-    <!-- Intro -->
     <div id="intro">
         <h1>Sumanth Reddy Katkoori</h1>
         <p>Data Scientist specializing in Generative AI, Deep Learning, Natural Language Processing, Power BI, Tableau, Python, etc.</p>
         <p>Photo/Videographer with Sony FX30, DJI Mini 3 Pro</p>
     </div>
 
-    <!-- Header -->
     <header id="header">
-        <a href="index.html" class="logo">Sumanth Reddy Katkoori </a>
+        <a href="index.html" class="logo">Sumanth Reddy Katkoori</a>
     </header>
 
-    <!-- Nav -->
     <nav id="nav">
         <ul class="links">
             <li class="active"><a href="index.html">Projects</a></li>
             <li><a href="photography.html">Photography</a></li>
-            <li><a href="chatbot.html">Chatbot</a></li> <!-- Add this line for the Chatbot section -->
+            <li><a href="chatbot.html">Chatbot</a></li>
         </ul>
         <ul class="icons">
             <li><a href="https://www.linkedin.com/in/sumanthreddy2619/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -70,32 +55,22 @@
         </ul>
     </nav>
 
-    <!-- Main -->
     <div id="main">
-        <!-- Featured Post -->
         <article class="post featured">
             <header class="major">
                 <span class="date">PAPER PUBLICATIONS</span>
                 <h2><a href="https://ijsrcseit.com/CSEIT217385" target="_blank">MODELING AND PREDICTION OF CONCRETE COMPRESSIVE STRENGTH USING MACHINE LEARNING</a></h2>
-                <!-- Article Preview -->
                 <p>International Journal of Engineering Research and Development - Impact Factor: 8.154</p>
-                <!-- End Article Preview -->
-                <!-- Additional Points -->
                 <ul style="list-style-type: disc; margin-left: 20px; font-size: large;">
                     <li>Employed machine learning techniques such as Multilayer Perceptron Neural Network (MLP) and Support Vector Machines (SVM) to predict concrete compressive strength.</li>
                     <li>Achieved approximately 90.07% accuracy using MLP and 90.22% accuracy using SVM, demonstrating the effectiveness of these models.</li>
                     <li>Utilized k-fold cross-validation with k set to 5 to evaluate the generalization performance and validate the robustness of machine learning models, achieving an average accuracy of 88.5% across all folds.</li>
                 </ul>
-                <!-- End Additional Points -->
-                <!-- Embed PDF Preview -->
                 <embed src="https://skatkoor.github.io/images/CSEIT217385.pdf" type="application/pdf" width="100%" height="600px" />
-                <!-- End Embed PDF Preview -->
             </header>
         </article>
 
-        <!-- Project Containers -->
         <div class="project-container">
-            <!-- First Project -->
             <div class="project-left">
                 <h3>Predicting Breast Cancer using Logistic Regression with Newton-Raphson Optimization</h3>
                 <ul>
@@ -105,7 +80,6 @@
                 </ul>
                 <a href="https://github.com/skatkoor/Newton-Raphson-Method-for-Logistic-Regression-/blob/main/Machine%20Learning%20Mini%20Project%202.ipynb" class="button" target="_blank">View Project</a>
             </div>
-            <!-- Second Project -->
             <div class="project-right">
                 <h3>Bank Direct Marketing Data Analysis Using CRISP-DM Framework</h3>
                 <ul>
@@ -116,7 +90,6 @@
             </div>
         </div>
 
-        <!-- New Project Container for Chatbot -->
         <div class="project-container">
             <div class="project-left">
                 <h3>Personalized AI Chatbot with Context-Aware Responses and Vector Database Integration</h3>
@@ -130,22 +103,19 @@
                 </ul>
                 <a href="chatbot.html" class="button">Try Chatbot</a>
             </div>
-            <!-- Bitcoin Price Prediction Project -->
             <div class="project-right">
                 <h3>Bitcoin Price Prediction with LSTM and Online Learning</h3>
                 <ul>
                     <li>Developed a Bitcoin price prediction model using Long Short-Term Memory (LSTM) networks with 50 units and 2 layers, optimized for capturing temporal dependencies in time-series data.</li>
                     <li>Utilized historical Bitcoin price data, normalized using MinMaxScaler, and created sequences of 60 time steps for model input.</li>
                     <li>Achieved a Mean Absolute Error (MAE) of 2987.84 and a Mean Absolute Percentage Error (MAPE) of 0.0655 by fine-tuning hyperparameters, including a dropout rate of 0.3 and a batch size of 64.</li>
-                    <li>Designed an online learning mechanism to update the model with new Bitcoin price data, enhancing its adaptability to market fluctuations. (Note: Implementation requires setting up a data pipeline for real-time data ingestion.)</li>
-                    <li>Plans to integrate real-time data processing for continuous model updates and explore additional features to further enhance predictive accuracy.</li>
+                    <li>Designed an online learning mechanism to update the model with new Bitcoin price data, enhancing its adaptability to market fluctuations.</li>
+                    <li>Planning to integrate real-time data processing for continuous model updates and explore additional features to further enhance predictive accuracy.</li>
                 </ul>
                 <a href="https://github.com/skatkoor/Bitcoin-Price-Prediction" class="button" target="_blank">View Project</a>
             </div>
         </div>
-        <!-- End Project Containers -->
 
-        <!-- Footer -->
         <footer>
             <div class="pagination">
                 <!-- Pagination links -->
@@ -154,19 +124,16 @@
 
     </div>
 
-    <!-- Footer -->
     <footer id="footer">
         <!-- Contact form and info -->
     </footer>
 
-    <!-- Copyright -->
     <div id="copyright">
         <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
     </div>
 
 </div>
 
-<!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
